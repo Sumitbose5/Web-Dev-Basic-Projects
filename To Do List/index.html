@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-950">
+
+    <nav class="bg-slate-900 p-4 flex justify-between items-center">
+        <div class="flex space-x-8">
+            <a id="home" href="#" class="text-white pr-4 hover:text-blue-400 font-medium">Home</a>
+            <a id="about" href="#" class="text-white pr-4 hover:text-blue-400 font-medium">About</a>
+            <a id="contact" href="#" class="text-white pr-4 hover:text-blue-400 font-medium">Contact</a>
+        </div>
+
+        <div>
+            <button id="btn" class="bg-blue-500 text-white p-1 pl-3 pr-3 rounded-md hover:bg-blue-600">Login</button>
+        </div>
+    </nav>
+
+    <div id="main" class="container mx-auto mt-8">
+        <h1 class="text-3xl font-bold text-center text-white mb-6">To-Do List</h1>
+
+        <!-- Task Input Section -->
+        <div class="flex justify-center mb-4">
+            <input id="taskInput" type="text" class="rounded-l-lg p-2 w-1/2 border-2 border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="Add a new task">
+            <button id="addTaskBtn" class="bg-blue-500 text-white px-4 py-2 rounded-r-lg hover:bg-blue-600">Add Task</button>
+        </div>
+
+        <!-- Task List -->
+        <ul id="taskList" class="bg-white shadow-md rounded-lg p-4 w-3/4 mx-auto">
+            <!-- Dynamically added tasks will go here -->
+        </ul>
+    </div>
+    
+    
+    <script src="app.js"></script>
+</body>
+</html>
