@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-950">
+    <!-- Navbar -->
+    <nav class="bg-slate-900 p-4 flex justify-between items-center">
+        <div class="flex space-x-8">
+            <a id="home" href="#" class="text-white pr-4 hover:text-blue-400 font-medium">Home</a>
+            <a id="about" href="#" class="text-white pr-4 hover:text-blue-400 font-medium">About</a>
+            <a id="contact" href="#" class="text-white pr-4 hover:text-blue-400 font-medium">Contact</a>
+        </div>
+
+        <div>
+            <button id="btn" class="bg-blue-500 text-white p-1 pl-3 pr-3 rounded-md hover:bg-blue-600">Login</button>
+        </div>
+    </nav>
+
+    <!-- Contact Form Section -->
+    <div class="container mx-auto mt-8 p-4 bg-white shadow-lg rounded-lg">
+        <h1 class="text-3xl font-bold text-center text-gray-800 mb-6">Contact Us</h1>
+
+        <form action="#" method="POST" class="space-y-6">
+            <div>
+                <label for="name" class="block text-gray-700">Full Name</label>
+                <input type="text" id="name" name="name" class="w-full p-2 mt-1 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="Your Name" required>
+            </div>
+
+            <div>
+                <label for="email" class="block text-gray-700">Email Address</label>
+                <input type="email" id="email" name="email" class="w-full p-2 mt-1 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="you@example.com" required>
+            </div>
+
+            <div>
+                <label for="message" class="block text-gray-700">Your Message</label>
+                <textarea id="message" name="message" rows="4" class="w-full p-2 mt-1 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="Write your message here..." required></textarea>
+            </div>
+
+            <div class="text-center">
+                <button type="submit" class="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 focus:outline-none">Send Message</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white text-center p-4 mt-12">
+        <p>&copy; 2024 Your Website Name. All rights reserved.</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
