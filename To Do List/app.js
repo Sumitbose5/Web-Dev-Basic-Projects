@@ -1,27 +1,8 @@
 // Login Button -->
+
 document.getElementById('btn').addEventListener('click', function(){
     alert('Kya karega Login Karke!')
 })
-
-// Switching between Pages -->
-
-const loadContent = (page) => {
-    switch (page) {
-        case 'home':
-            window.location.href = 'index.html';
-            break; // Add break here
-        case 'about':
-            window.location.href = 'about.html';
-            break; // Add break here
-        case 'contact':
-            window.location.href = 'contact.html';
-            break; // Add break here
-    }
-};
-
-document.getElementById('home').addEventListener('click', () => loadContent('home'));
-document.getElementById('about').addEventListener('click', () => loadContent('about'));
-document.getElementById('contact').addEventListener('click', () => loadContent('contact'));
 
 
 // Main logic of the TO DO List APP --->
