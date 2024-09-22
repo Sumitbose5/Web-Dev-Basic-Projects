@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="m-0 overflow-hidden">
+
+    <div class="bg-cover bg-center h-screen" style="background-image: url('https://img.uhdpaper.com/wallpaper/pokemon-ball-house-anime-digital-art-68@1@o');">
+        <div id="pokeimg" class="flex justify-center">
+            <img class="w-64" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/640px-International_Pok%C3%A9mon_logo.svg.png" alt="pokemon">
+        </div>
+
+    <!-- Input Element for Searching Pokémon -->
+    <div class="flex justify-center items-center m-10">
+        <input 
+            type="text" 
+            placeholder="Search for Pokémon" id="nameInput"
+            class="w-full max-w-xs px-4 py-3 border border-gray-300 rounded-lg shadow-sm placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition ease-in-out duration-200"
+        >
+        <button id="searchBtn" class="bg-blue-500 p-3 rounded-lg shadow-lg hover:bg-blue-600">Search</button>
+    </div>
+
+    <!-- Box for Pokemon -->
+    <div class="flex justify-center items-center pt-7">
+        <div class="flex w-3/4 h-64 rounded-lg overflow-hidden shadow-lg">
+            <!-- Green Side (1 part) -->
+            <div class="bg-green-500 basis-1/4">
+                <img id="pokeImg" src="https://placehold.co/600x1024/EEE/31343C?font=playfair-display&text=Pokemon%20Image" alt="img">
+            </div>
+    
+            <!-- Blue Side (3 parts) -->
+            <div id="prop" class="bg-blue-500 basis-3/4 flex-col p-3">
+                <!-- Dynamic Elements -->
+                <h1 id="pokeName" class="text-2xl font-mono font-bold pb-4 uppercase tracking-widest"></h1>
+                <h3 id="exp"></h3>
+                <h3 id="pokId"></h3>
+                <h3 id="ability"></h3>
+                <h3 id="weight"></h3>
+                <audio id="myAudio" src=""></audio>
+                <div id="soundBtnCont">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
