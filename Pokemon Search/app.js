@@ -1,19 +1,3 @@
-// Access all the pokemons names
-
-const pokemons = async function(){
-    try{
-        const response = await fetch('https://pokeapi.co/api/v2/pokemon');
-        const data = await response.json();
-        const res = data.results;
-
-        const nameList = res.map((pokNames)=> pokNames.name);
-        return nameList;
-    }
-    catch(err){
-        console.log('ERROR',err);
-    }
-};
-
 
 // Function to get Details of pokemons name, weight, experience,etc.
 
@@ -89,27 +73,24 @@ function getContent(){
     if(pokeNameInput !== ''){
         const pokeName = pokeNameInput.toLowerCase();
 
-        pokemons()
-        .then(nameList =>{
-                if(nameList.includes(pokeName)){
-                    // Get Details of Pokemon
-                    getDetails(pokeName)
-                    .then(data =>{
-                        document.getElementById('pokeName').textContent = data.name;
-                        document.getElementById('weight').innerHTML = "<span><b>Weight : </b></span>" + data.weight;
-                        document.getElementById('pokId').innerHTML = "<span><b>Pokemon Id : </b></span>" + data.weight;
-                        document.getElementById('exp').innerHTML = "<span><b>Base Experience : </b></span>" + data.exp;
-                        document.getElementById('ability').innerHTML = "<span><b>Abilities : </b></span>" + data.abilityStr;
-                        document.getElementById('pokeImg').src = data.imgUrl;
-                        document.getElementById('myAudio').src = data.audio;
-                    })
-
-                    playAudio();
-                }
-                else{
-                    alert('Name not found :(')
-                }
-        })
+        // Get Details of Pokemon
+        getDetails(pokeName)
+        .then(data =>{
+            if(data){
+                document.getElementById('pokeName').textContent = data.name;
+                document.getElementById('weight').innerHTML = "<span><b>Weight : </b></span>" + data.weight;
+                document.getElementById('pokId').innerHTML = "<span><b>Pokemon Id : </b></span>" + data.weight;
+                document.getElementById('exp').innerHTML = "<span><b>Base Experience : </b></span>" + data.exp;
+                document.getElementById('ability').innerHTML = "<span><b>Abilities : </b></span>" + data.abilityStr;
+                document.getElementById('pokeImg').src = data.imgUrl;
+                document.getElementById('myAudio').src = data.audio;
+                playAudio();
+            }
+            else{
+                alert('Pokemon Not Found :(')
+            }
+        }).catch(err => console.log('Error Fetching Details',err))
+        
     }
 }
 
